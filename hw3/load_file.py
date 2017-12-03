@@ -55,15 +55,23 @@ for i in range(5):
 	#print(y.shape)
 	#print(type(y))
 	file = file[0:len(file)-1]
-#print(y)
 print("xtrain shape:",xtrain.shape)
 print('ytrain shape:',ytrain.shape)
-filetest = ''
-
-
 
 filetest = "./cifar-10-batches-py/test_batch"
 (xtest,ytest) = load_CIFAR_batch(filetest)
 print('xtest shape: ',xtest.shape)
 print('ytest shape: ',ytest.shape)
+print('whether the two arrays are the same:')
+print(np.array_equal(xtrain,x_train))
+
+ytrain = np.array(list(zip(ytrain)))
+print(np.array_equal(ytrain,y_train))
+print(np.array_equal(xtest,x_test))
+ytest = np.array(list(zip(ytest)))
+print(np.array_equal(ytest,y_test))
+
+#print(ytest)
+#print(y_test)
+
 
