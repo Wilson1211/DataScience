@@ -1,0 +1,16 @@
+import numpy as np
+a = np.array([1,2,5,3,9])
+b = np.array([2,6,8,6,74])
+d = np.array([[6],[8],[484],[222],[7444]])
+d1 = np.array([[222],[99],[483],[699],[6644]])
+c = np.concatenate([a,b])
+print(c)
+c2 = np.vstack((a,b))
+print(c2)
+print(c2.shape)
+
+print(d.shape)
+print(d1.shape)
+d2 = np.vstack((d,d1))
+print(d2.shape)
+print(d2)
